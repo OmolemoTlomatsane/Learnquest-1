@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-clash-display {
+  font-family: 'Clash Display', sans-serif;
+}
+
+@layer utilities {
+  .cyber-gradient {
+    background: linear-gradient(45deg, #00F0FF 0%, #7A2FF9 50%, #FF1B6B 100%);
+  }
+  
+  .cyber-text {
+    background: linear-gradient(45deg, #00F0FF, #7A2FF9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cyber-border {
+    position: relative;
+    background: linear-gradient(145deg, #00F0FF 0%, #7A2FF9 100%);
+    padding: 1px;
+  }
+
+  .cyber-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, 
+      rgba(0,240,255,0.2) 0%, 
+      rgba(122,47,249,0.2) 100%);
+    z-index: -1;
+  }
+
+  @keyframes cyber-glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+}
+.study-plan {
+  font-family: 'Inter', sans-serif;
+}
+
+.task-item {
+  transition: background-color 0.2s ease;
+}
+
+.week-card {
+  box-shadow: 0 4px 6px -1px rgba(0, 240, 255, 0.1);
+}
+
+.day-card {
+  border-left: 4px solid #a855f7;
+}
